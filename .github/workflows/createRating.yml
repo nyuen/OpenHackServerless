@@ -5,7 +5,7 @@ on:
     paths:
       - 'CreateRating/**'
     branches:
-      - master
+      - main
 
 env:
   AZURE_FUNCTIONAPP_NAME: openhack-rating-api # set this to your application's name

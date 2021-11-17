@@ -5,11 +5,6 @@ import azure.functions as func
 import json
 import os
 
-#HOST            = "https://oh10team.documents.azure.com:443/"
-#MASTER_KEY      = "ujMdDf0YfMLIctvI4S8ly8QsJ8mfDzj9AhAWt5qjTPHUFY6SOn1niKJQZI5I94zRLhjjMzo839OowlANDiYxTg=="
-#DATABASE_ID     = "BFYOC"
-#CONTAINER_ID    = "IceCreamRating"
-
 HOST            = os.environ['HOST']
 MASTER_KEY      = os.environ['MASTER_KEY']
 DATABASE_ID     = os.environ['DATABASE_ID']

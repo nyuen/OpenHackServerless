@@ -16,6 +16,7 @@ CONTAINER_ID    = os.environ['CONTAINER_ID']
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
+
     client      = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY} )
     database    = client.get_database_client(DATABASE_ID)
     container   = database.get_container_client(CONTAINER_ID)
@@ -51,6 +52,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     userId = req_body["userId"]
     responseUser = requests.get('https://serverlessohapi.azurewebsites.net/api/GetUser?userId='+userId)
     if responseUser.status_code == 404:
+
         return func.HttpResponse(
             "Please pass a valid userid on the query string or in the request body",
             status_code=404

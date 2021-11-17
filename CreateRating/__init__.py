@@ -9,11 +9,11 @@ import uuid
 import time
 from jsonschema import validate
 
+HOST            = os.environ['HOST']
+MASTER_KEY      = os.environ['MASTER_KEY']
+DATABASE_ID     = os.environ['DATABASE_ID']
+CONTAINER_ID    = os.environ['CONTAINER_ID']
 
-HOST            = "https://oh10team.documents.azure.com:443/"
-MASTER_KEY      = "ujMdDf0YfMLIctvI4S8ly8QsJ8mfDzj9AhAWt5qjTPHUFY6SOn1niKJQZI5I94zRLhjjMzo839OowlANDiYxTg=="
-DATABASE_ID     = "BFYOC"
-CONTAINER_ID    = "IceCreamRating"
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     client      = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY} )
